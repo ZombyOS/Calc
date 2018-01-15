@@ -14,6 +14,7 @@ def choose():
 	print("11: Integralannäherung für 1+x^-2")
 	print("12: Vektorlänge")
 	print("13: Skalarprodukt")
+	print("14: Kreuzprodukt")
 	options = {1: dice,
 	2: hypGeo,
 	3: bin,
@@ -26,7 +27,8 @@ def choose():
 	10: binAbweichung,
 	11: integral,
 	12: vectorLength,
-	13: scaleProduct}
+	13: scaleProduct,
+	14: crossProduct}
 	num = int(input("Welche Funktion soll ausgeführt werden? "))
 	options[num]()
 

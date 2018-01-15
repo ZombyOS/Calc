@@ -193,12 +193,18 @@ def vectorLength():						#takes the input for a vector and passes it to the vecl
 	return result
 
 def crossProduct():
-	
+	veca = vectorCreation()
+	vecb = vectorCreation()
+	a = veca[2] * vecb[3] - veca[3] * vecb[2]
+	b = veca[3] * vecb[1] - veca[1] * vecb[2]
+	c = veca[1] * vecb[2] - veca[2] * vecb[1]
+	return np.array( (a, b, c) )
+
 def vectorCreation():
-	print("Just use 3-dimensional vectors")
+	print("Just use 3-dimensional vectors. To transform a 2-dimensional vector to a 3D one, just set the last coordinate to 0")
 	veclist = []
 	for i in range(2):
-		veclist.append(float(input("Geben sie die " + str(i + 1) + ". Nummer ein")))
+		veclist.append(float(input("Please enter coordinate number " + str(i + 1))))
 	vec = np.array(veclist)
 	return vec
 
